@@ -2,6 +2,7 @@ import time
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--start-maximized")
@@ -20,7 +21,7 @@ time.sleep(5)
 driver.switch_to.frame(0)
 
 # Click serach button.
-driver.find_element_by_id('btn_ok').click()
+driver.find_element(By.ID, 'btn_ok').click()
 
 time.sleep(3)
 
